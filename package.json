@@ -1,6 +1,6 @@
 {
   "name": "koa-pagination-v2",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "Koa pagination middleware",
   "main": "src/index.js",
   "scripts": {
@@ -16,7 +16,15 @@
     "url": "https://github.com/ArtashMardoyan/koa-pagination/issues"
   },
   "homepage": "https://github.com/ArtashMardoyan/koa-pagination#readme",
-  "dependencies": {
-    "lodash": "^4.17.21"
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "prettier": "^1.12.1"
   }
 }
