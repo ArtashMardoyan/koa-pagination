@@ -41,9 +41,15 @@ app.use(pagination({ defaultLimit: 20, maximumLimit: 50 }));
 app.get('/', async ctx => {
     const { limit, offset, page } = ctx.state.paginate;
 
-    const { rows: users, count: total } = await User.findAndCountAll({ offset, limit });
+    const { rows: users, count: total } = await User.findAndCountAll({
+        offset,
+        limit
+    });
 
-    return ctx.ok({ users, _meta: { page, total, pageCount: Math.ceil(total / limit) } });
+    return ctx.ok({
+        users,
+        _meta: { page, total, pageCount: Math.ceil(total / limit) }
+    });
 });
 
 app.listen(3000);
