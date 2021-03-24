@@ -2,13 +2,21 @@
   "extends": [
     "standard",
     "prettier",
-    "prettier/standard"
+    "prettier/standard",
+    "plugin:jest/style",
+    "plugin:jest/recommended"
   ],
   "plugins": [
+    "jest",
     "prettier",
     "standard"
   ],
   "rules": {
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error",
     "prettier/prettier": [
       "error",
       {
@@ -19,11 +27,12 @@
     ]
   },
   "env": {
+    "jest/globals": true,
     "es6": true,
     "node": true
   },
   "parserOptions": {
-    "ecmaVersion": 2018,
+    "ecmaVersion": 2019,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true,
