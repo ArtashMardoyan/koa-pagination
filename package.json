@@ -1,0 +1,22 @@
+{
+  "name": "koa-pagination-v2",
+  "version": "0.0.2",
+  "description": "Koa pagination middleware",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Artash Mardoyan",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArtashMardoyan/koa-pagination.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ArtashMardoyan/koa-pagination/issues"
+  },
+  "homepage": "https://github.com/ArtashMardoyan/koa-pagination#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
