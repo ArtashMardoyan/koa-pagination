@@ -1,6 +1,6 @@
 {
   "name": "koa-pagination-v2",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Koa pagination middleware",
   "main": "src/index.js",
   "scripts": {
