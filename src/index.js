@@ -1,4 +1,6 @@
-module.exports = ({ maximumLimit, defaultLimit }) => {
+module.exports = (option = {}) => {
+    const { maximumLimit, defaultLimit } = option;
+
     const _maximumLimit = typeof maximumLimit === 'number' ? parseInt(maximumLimit, 10) : 100;
     const _defaultLimit = typeof defaultLimit === 'number' ? parseInt(defaultLimit, 10) : 10;
 
