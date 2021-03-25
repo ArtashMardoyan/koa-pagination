@@ -29,10 +29,7 @@ The middleware can be configured with the following parameters:
 You can change the defaults by doing:
 
 ```javascript
-pagination({
-  defaultLimit: 20,
-  maximumLimit: 50
-});
+pagination({ defaultLimit: 20, maximumLimit: 50 });
 ```
 
 ## Usage
