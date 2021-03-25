@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/ArtashMardoyan/koa-pagination#readme",
   "devDependencies": {
+    "@shopify/jest-koa-mocks": "^2.3.3",
     "eslint": "^6.5.1",
     "eslint-config-prettier": "^2.9.0",
     "eslint-config-standard": "^11.0.0",
