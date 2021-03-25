@@ -1,11 +1,17 @@
 {
   "name": "koa-pagination-v2",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Koa pagination middleware",
   "main": "src/index.js",
   "scripts": {
     "test": "jest"
   },
+  "keywords": [
+    "paginate",
+    "pagination",
+    "koa-paginate",
+    "koa-pagination"
+  ],
   "author": "Artash Mardoyan",
   "license": "ISC",
   "repository": {
