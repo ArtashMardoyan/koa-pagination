@@ -2,10 +2,10 @@
 
 > Pagination middleware for [Koa](https://github.com/koajs/koa).
 
-
-[![MIT License][license-badge]][license-url]
-[![install size][install_size-badge]][install_size-url]
+[![npm version][npm_version_badge]][npm_version_url]
 [![npm downloads][npm_download-badge]][npm_download-url]
+[![install size][install_size-badge]][install_size-url]
+[![MIT License][license-badge]][license-url]
 
 
 ## Installation
@@ -98,9 +98,11 @@ app.listen(3000);
 
 [MIT][license-url]
 
-[license-badge]:https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat
-[license-url]:https://github.com/ArtashMardoyan/koa-pagination/blob/master/LICENSE
-[install_size-badge]:https://packagephobia.com/badge?p=koa-pagination-v2&style=flat
-[install_size-url]:https://packagephobia.now.sh/result?p=koa-pagination-v2
 [npm_download-badge]:https://img.shields.io/npm/dm/koa-pagination-v2.svg?style=flat
 [npm_download-url]:http://npm-stat.com/charts.html?package=koa-pagination-v2
+[npm_version_badge]:https://img.shields.io/npm/v/koa-pagination-v2.svg?style=flat
+[npm_version_url]:https://www.npmjs.org/package/koa-pagination-v2
+[install_size-badge]:https://packagephobia.com/badge?p=koa-pagination-v2&style=flat
+[install_size-url]:https://packagephobia.now.sh/result?p=koa-pagination-v2
+[license-badge]:https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat
+[license-url]:https://github.com/ArtashMardoyan/koa-pagination/blob/master/LICENSE
