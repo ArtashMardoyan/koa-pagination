@@ -3,7 +3,10 @@
 > Pagination middleware for [Koa](https://github.com/koajs/koa).
 
 
-[![MIT License][license-shield]][license-url]
+[![MIT License][license-badge]][license-url]
+[![install size][install_size-badge]][install_size-url]
+[![npm downloads][npm_download-badge]][npm_download-url]
+
 
 ## Installation
 
@@ -34,7 +37,7 @@ pagination({ defaultLimit: 20, maximumLimit: 50 });
 
 ## Usage
 
-# For the Sequelize ORM
+#### For the Sequelize ORM
 ```javascript
 const app = new (require('koa'))();
 const pagination = require('koa-pagination-v2');
@@ -59,7 +62,7 @@ app.get('/', async ctx => {
 
 app.listen(3000);
 ```
-# For the Mongoose ODM
+#### For the Mongoose ODM
 ```javascript
 const app = new (require('koa'))();
 const pagination = require('koa-pagination-v2');
@@ -85,5 +88,19 @@ app.get('/', async ctx => {
 app.listen(3000);
 ```
 
-[license-shield]:https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+## Request example
+
+```sh
+> http://localhost:3000/v1/users?page=1&limit=10
+```
+
+## License
+
+[MIT][license-url]
+
+[license-badge]:https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat
 [license-url]:https://github.com/ArtashMardoyan/koa-pagination/blob/master/LICENSE
+[install_size-badge]:https://packagephobia.com/badge?p=koa-pagination-v2&style=flat
+[install_size-url]:https://packagephobia.now.sh/result?p=koa-pagination-v2
+[npm_download-badge]:https://img.shields.io/npm/dm/koa-pagination-v2.svg?style=flat
+[npm_download-url]:http://npm-stat.com/charts.html?package=koa-pagination-v2
