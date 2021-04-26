@@ -36,8 +36,6 @@ pagination({ defaultLimit: 20, maximumLimit: 50 });
 ```
 
 ## Usage
-
-#### For the Sequelize ORM
 ```javascript
 const app = new (require('koa'))();
 const pagination = require('koa-pagination-v2');
@@ -53,31 +51,6 @@ app.get('/', async ctx => {
         offset,
         limit
     });
-
-    return ctx.ok({
-        users,
-        _meta: { page, total, pageCount: Math.ceil(total / limit) }
-    });
-});
-
-app.listen(3000);
-```
-#### For the Mongoose ODM
-```javascript
-const app = new (require('koa'))();
-const pagination = require('koa-pagination-v2');
-
-const { User } = require('../models');
-
-app.use(pagination({ defaultLimit: 20, maximumLimit: 50 }));
-
-app.get('/', async ctx => {
-    const { limit, skip, page } = ctx.state.paginate;
-
-    const [users, total] = await Promise.all([
-        await User.find().skip(skip).limit(limit),
-        await User.countDocuments()
-    ]);
 
     return ctx.ok({
         users,
