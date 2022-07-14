@@ -14,8 +14,19 @@ module.exports = (option = {}) => {
 
         const offset = page * limit - limit;
 
-        ctx.state.paginate = { limit, page, offset, skip: offset };
-        ctx.state.pageable = total => ({ total, currentPage: page, pageCount: Math.ceil(total / limit) });
+        ctx.state.paginate = {
+            page,
+            limit,
+            offset,
+            skip: offset,
+            pageable: total => ({
+                total,
+                currentPage: page,
+                hasPrev: offset > 0,
+                hasNext: total.count > offset + limit,
+                pageCount: Math.ceil(total / limit)
+            })
+        };
 
         await next();
     };

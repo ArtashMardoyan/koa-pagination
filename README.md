@@ -45,14 +45,14 @@ const { User } = require('../models');
 app.use(pagination({ defaultLimit: 20, maximumLimit: 50 }));
 
 app.get('/', async ctx => {
-    const { limit, offset } = ctx.state.paginate;
+    const { limit, offset, pageable } = ctx.state.paginate;
 
     const { rows: users, count: total } = await User.findAndCountAll({
         offset,
         limit
     });
 
-    return ctx.ok({ users, _meta: ctx.state.pageable(total) });
+    return ctx.ok({ users, _meta: pageable(total) });
 });
 
 app.listen(3000);
@@ -103,7 +103,9 @@ app.listen(3000);
   "_meta": {
     "total": 4,
     "pageCount": 4,
-    "currentPage": 1
+    "currentPage": 1,
+    "hasPrev": false,
+    "hasNext": false
   }
 }
 ```
