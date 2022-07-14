@@ -23,7 +23,7 @@ module.exports = (option = {}) => {
                 total,
                 currentPage: page,
                 hasPrev: offset > 0,
-                hasNext: total.count > offset + limit,
+                hasNext: total > offset + limit,
                 pageCount: Math.ceil(total / limit)
             })
         };
