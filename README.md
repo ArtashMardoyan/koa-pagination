@@ -45,17 +45,14 @@ const { User } = require('../models');
 app.use(pagination({ defaultLimit: 20, maximumLimit: 50 }));
 
 app.get('/', async ctx => {
-    const { limit, offset, page } = ctx.state.paginate;
+    const { limit, offset } = ctx.state.paginate;
 
     const { rows: users, count: total } = await User.findAndCountAll({
         offset,
         limit
     });
 
-    return ctx.ok({
-        users,
-        _meta: { page, total, pageCount: Math.ceil(total / limit) }
-    });
+    return ctx.ok({ users, _meta: ctx.state.pageable(total) });
 });
 
 app.listen(3000);
@@ -65,6 +62,50 @@ app.listen(3000);
 
 ```sh
 > http://localhost:3000/v1/users?page=1&limit=10
+```
+
+## Response example
+
+``` json
+{
+  "statusName": "OK",
+  "statusCode": 200,
+  "data": [
+    {
+      "id": "b79398ef-acf2-4e67-af1b-1482b79886b1",
+      "firstName": "Artash",
+      "lastName": "Mardoyan",
+      "updatedAt": "2022-07-11T08:24:38.337Z",
+      "createdAt": "2022-07-11T08:17:05.356Z"
+    },
+    {
+      "id": "b79398ef-acf2-4e67-af1b-1482b79886b2",
+      "firstName": "Gagik",
+      "lastName": "Alikhanyan",
+      "updatedAt": "2022-07-11T08:24:38.337Z",
+      "createdAt": "2022-07-11T08:17:05.356Z"
+    },
+    {
+      "id": "b79398ef-acf2-4e67-af1b-1482b79886b3",
+      "firstName": "Rafik",
+      "lastName": "Abgaryan",
+      "updatedAt": "2022-07-11T08:24:38.337Z",
+      "createdAt": "2022-07-11T08:17:05.356Z"
+    },
+    {
+      "id": "b79398ef-acf2-4e67-af1b-1482b79886b3",
+      "firstName": "Tsolak",
+      "lastName": "Harutyunyan",
+      "updatedAt": "2022-07-11T08:24:38.337Z",
+      "createdAt": "2022-07-11T08:17:05.356Z"
+    }
+  ],
+  "_meta": {
+    "total": 4,
+    "pageCount": 4,
+    "currentPage": 1
+  }
+}
 ```
 
 ## License
