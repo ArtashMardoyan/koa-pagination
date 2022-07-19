@@ -101,6 +101,8 @@ app.listen(3000);
     }
   ],
   "_meta": {
+    "offset": 0,
+    "limit": 10,
     "total": 4,
     "pageCount": 4,
     "currentPage": 1,

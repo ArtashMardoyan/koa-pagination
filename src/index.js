@@ -20,7 +20,9 @@ module.exports = (option = {}) => {
             offset,
             skip: offset,
             pageable: total => ({
+                limit,
                 total,
+                offset,
                 currentPage: page,
                 hasPrev: offset > 0,
                 hasNext: total > offset + limit,
